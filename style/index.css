@@ -44,7 +44,9 @@ table {
 }
 /* end of reset code */
 
-
+/* *{
+    border:5px solid black;
+} */
 
 header{
     background-color:rgba(128, 128, 128, 0.13);
@@ -70,6 +72,12 @@ nav a{
     color:black;
     padding:4px 20px;
     text-decoration: none;
+    transition: all .5s ease;
+}
+nav a:hover{
+    transform:scale(1.2);
+    background-color: white;
+    color:black;
 }
 
 nav .Home{
@@ -126,12 +134,61 @@ nav .Home{
       width: 45%;
       align-items: center;
   }
-  .bottom img{
-   
-  }
-  .bottom div:hover{
+.contactme div{
+    background-color: rgba(128, 128, 128, 0.13);
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom div:hover{
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
     transition: 1s ease;
+  } 
+
+
+.contactme button{
+    border: 2px solid black;
+    color:black;
+    padding:1% 5%;
+    text-decoration: none;
+    background-color: white;
+    font-size: 1.3rem;
+    transition: all 1s ease;
+}
+.contactme button:hover{
+    transform:scale(1.2);
+    color:white;
+    background-color: black;
+}
+
+  @media(max-width:400px){
+    .top div{
+        display: flex;
+        justify-content: center;
+    }
+    nav{
+        flex-direction: column;
+        width:25%; 
+     
+    }
+    .topsection p{
+        font-size: small;
+        margin-top:5%;
+    }  
+    .bottom{
+          flex-wrap: wrap;
+          margin-left: 4%;
+      }
+      .bottom div{
+        width: 40%;
+        justify-content: space-around;
+        margin:3%;
+      }
+      .bottom p{
+          text-align:center;
+          margin-left:25%;
+      }
   }
